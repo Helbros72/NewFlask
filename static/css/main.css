@@ -1,0 +1,114 @@
+body {
+    background-color: whitesmoke;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header__img {
+    height: 48px;
+    width: 48px;
+}
+
+/* footer */
+.footer__img {
+    height: 48px;
+    width: 48px;
+}
+
+/* POSTS */
+@media (max-width: 768px) {
+    .item {
+        width: 100%;
+    }
+}
+
+.item {
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 1px;
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    margin-right: 2%;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.item .item-in {
+    background: #fff;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.item .item-in:hover::before {
+    width: 100%;
+}
+
+.item .item-in:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #333333;
+    right: 0;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+    z-index: 1;
+}
+
+.item h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.item p {
+    font-size: 12px;
+}
+
+.item a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.item a i {
+    opacity: 0;
+    padding-left: 0;
+    transition: all 0.4s ease;
+    font-size: 24px;
+    display: inline-block;
+    top: 5px;
+    position: relative;
+}
+
+.item a:hover {
+    text-decoration: none;
+}
+
+.item a:hover i {
+    padding-left: 10px;
+    opacity: 1;
+    font-weight: 300;
+}
